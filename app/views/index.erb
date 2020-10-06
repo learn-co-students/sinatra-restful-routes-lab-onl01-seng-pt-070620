@@ -1,0 +1,12 @@
+<h1>Recipes</h1>
+
+<% if @recipes != nil %>
+    <% @recipes.each do |recipe| %>
+        <p>
+            <h3> <%= recipe.name %> </h3>
+            <a href="/recipes/<%= recipe.id %>"> Go to recipe </a>
+        </p>
+    <% end %>
+<% else %>
+        <h3>No recipe</h3>
+<% end %>
