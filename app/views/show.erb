@@ -5,6 +5,7 @@
 <h2><%= @recipes.cook_time %></h2>
 
 <h3>To delete this recipe, click on the delete button below</h3>
+
 <form action="/recipes/<%= @recipes.id %>" method="post">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
   <input type="submit" value="delete">
