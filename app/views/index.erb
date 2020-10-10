@@ -1,0 +1,9 @@
+<% @recipes.collect do |r| %>
+<h1><%="Name: #{r.name}"%></h1>
+<h2><%="Ingredients: #{r.ingredients}"%></h2>
+<h2><%="Cook Time: #{r.cook_time}"%></h2>
+<a href=<%="/recipes/#{r.id}"%>
+<%end%>
+
+<h1>hello</h1>
+
