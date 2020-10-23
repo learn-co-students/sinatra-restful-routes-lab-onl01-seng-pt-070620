@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  #action should render a form to create
+  #action should render a for to create
   #a recipe 
   get '/recipes' do 
     @recipes = Recipe.all 
@@ -31,6 +31,7 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes/:id/edit' do 
     @recipe = Recipe.find_by_id(params[:id])
+    
     erb :edit 
   end 
 end
